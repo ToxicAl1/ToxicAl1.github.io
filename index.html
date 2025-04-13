@@ -2,105 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lamsa</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
     body {
-      background-color: #fefefe;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #3b0a63, #6b1e91);
+      color: #fff;
+      overflow-x: hidden;
     }
 
     header {
-      background-color: #222;
-      color: #fff;
-      padding: 2rem;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 600;
+      animation: fadeInLeft 1s ease;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 300;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffccff;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
+      padding: 100px 20px;
+      animation: fadeInUp 1.5s ease;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+    .hero h1 {
+      font-size: 64px;
+      margin: 0;
+      background: linear-gradient(90deg, #fff, #d0aaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin-top: 20px;
     }
 
     section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
     }
 
-    h2 {
-      margin-bottom: 1rem;
-      color: #222;
-    }
-
-    .services ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .services li {
-      background: #f4f4f4;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border-left: 5px solid #444;
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 20px;
     }
 
     footer {
+      background: rgba(0,0,0,0.3);
       text-align: center;
-      padding: 2rem;
-      background: #eee;
-      font-size: 0.9rem;
+      padding: 20px;
+      font-size: 14px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Lamsa</h1>
-    <p>Creative solutions for modern businesses</p>
+    <div class="logo">Lamsa</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>Lamsa is a company dedicated to delivering innovative and high-quality digital solutions. We aim to make a real impact by combining creativity, technology, and strategy.</p>
+  <section class="hero">
+    <h1>Welcome to Lamsa</h1>
+    <p>Delivering elegant digital solutions with a touch of innovation. We bring your ideas to life through creative design and powerful development.</p>
   </section>
 
-  <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Website Design & Development</li>
-      <li>Branding & Visual Identity</li>
-      <li>Digital Marketing & SEO</li>
-      <li>Custom Software Solutions</li>
-    </ul>
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p>Lamsa is a digital agency focused on creativity, technology, and meaningful user experiences. Whether you're launching a new product or refining your brand, we're here to help you shine.</p>
   </section>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: hello@lamsa.com</p>
-    <p>Phone: +123 456 7890</p>
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p>Web Design · Brand Identity · Mobile Apps · Animation · UX/UI Consulting</p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p>Email us at <a href="mailto:hello@lamsa.com" style="color:#ffccff;">hello@lamsa.com</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Lamsa. All rights reserved.
+    © 2025 Lamsa. All rights reserved.
   </footer>
 </body>
 </html>
