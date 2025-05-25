@@ -34,15 +34,15 @@
       justify-content: center;
       gap: 40px;
       margin: 60px auto 0;
-      max-width: 900px;
+      max-width: 700px;
     }
     .contact-card {
       background: #fff;
       color: #005b96;
-      border-radius: 20px;
+      border-radius: 12px;
       box-shadow: 0 10px 40px rgba(0,91,150,0.10), 0 2px 8px rgba(0,161,224,0.08);
-      padding: 50px 40px;
-      min-width: 280px;
+      padding: 40px 30px;
+      min-width: 260px;
       flex: 1 1 260px;
       text-align: center;
       position: relative;
@@ -50,16 +50,19 @@
       cursor: pointer;
       transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
       animation: popIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .contact-card:hover {
-      transform: scale(1.08) rotate(-2deg);
+      transform: scale(1.04) translateY(-6px);
       box-shadow: 0 20px 60px rgba(0,91,150,0.18), 0 4px 16px rgba(0,161,224,0.12);
       background: linear-gradient(135deg, #e6f2ff 60%, #b3e0ff 100%);
       color: #003366;
     }
     .contact-card .icon {
-      font-size: 56px;
-      margin-bottom: 20px;
+      font-size: 48px;
+      margin-bottom: 18px;
       color: #00a1e0;
       animation: wiggle 2s infinite;
       transition: color 0.3s;
@@ -69,12 +72,12 @@
       animation: shake 0.7s;
     }
     .contact-card h3 {
-      font-size: 28px;
+      font-size: 24px;
       margin-bottom: 10px;
       font-family: 'Playfair Display', serif;
     }
     .contact-card p {
-      font-size: 18px;
+      font-size: 17px;
       margin-bottom: 18px;
       color: #005b96;
       opacity: 0.85;
@@ -82,15 +85,17 @@
     .contact-card a {
       color: #fff;
       background: #00a1e0;
-      padding: 12px 28px;
-      border-radius: 30px;
+      padding: 14px 0;
+      border-radius: 8px;
       font-weight: 700;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 18px;
       transition: background 0.3s, color 0.3s;
-      display: inline-block;
+      width: 100%;
+      display: block;
       margin-top: 10px;
       box-shadow: 0 2px 8px rgba(0,161,224,0.10);
+      letter-spacing: 1px;
     }
     .contact-card:hover a {
       background: #005b96;
@@ -122,26 +127,6 @@
       80% { transform: rotate(10deg);}
       100% { transform: rotate(0deg);}
     }
-    .confetti {
-      pointer-events: none;
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      z-index: 9999;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    .confetti-piece {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      opacity: 0.7;
-      animation: confetti-fall 3s linear infinite;
-    }
-    @keyframes confetti-fall {
-      0% { transform: translateY(-40px) rotate(0deg);}
-      100% { transform: translateY(110vh) rotate(360deg);}
-    }
     @media (max-width: 900px) {
       .contact-options { flex-direction: column; gap: 30px;}
       .contact-card { min-width: 0; }
@@ -154,7 +139,7 @@
 
   <section class="contact-hero">
     <h1>تواصل مع همسة</h1>
-    <p>نحن هنا لمساعدتك! تواصل معنا عبر الهاتف أو البريد الإلكتروني أو الواتساب. فريقنا يحب التفاعل معك والإجابة على جميع استفساراتك.</p>
+    <p>نحن هنا لمساعدتك! تواصل معنا عبر الهاتف أو البريد الإلكتروني. فريقنا يحب التفاعل معك والإجابة على جميع استفساراتك.</p>
     <div class="contact-options">
       <div class="contact-card" onclick="window.open('tel:80055542672')">
         <div class="icon"><i class="fas fa-phone-alt"></i></div>
@@ -168,16 +153,8 @@
         <p>أرسل لنا استفساراتك أو ملاحظاتك أو حتى تحية.<br>نرد بسرعة!</p>
         <a href="mailto:info@hamsasystem.com">info@hamsasystem.com</a>
       </div>
-      <div class="contact-card" onclick="window.open('https://wa.me/180055542672')">
-        <div class="icon"><i class="fab fa-whatsapp"></i></div>
-        <h3>واتساب</h3>
-        <p>تواصل معنا فوراً عبر الواتساب.<br>دائماً متواجدون!</p>
-        <a href="https://wa.me/180055542672" target="_blank">ابدأ المحادثة</a>
-      </div>
     </div>
   </section>
-
-  <div class="confetti" id="confetti"></div>
 
   <footer>
     <div class="footer-content">
@@ -225,26 +202,6 @@
       <p>© 2025 نظام همسة لإدارة المستشفيات. جميع الحقوق محفوظة. | <a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a> | <a href="#">التوافق مع HIPAA</a></p>
     </div>
   </footer>
-  <script>
-    // Confetti fun!
-    function randomColor() {
-      const colors = ['#00a1e0', '#005b96', '#7dbcea', '#b3e0ff', '#ffb347', '#ff6961', '#77dd77', '#f49ac2'];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-    function createConfettiPiece() {
-      const confetti = document.createElement('div');
-      confetti.className = 'confetti-piece';
-      confetti.style.left = Math.random() * 100 + 'vw';
-      confetti.style.background = randomColor();
-      confetti.style.animationDuration = (2.5 + Math.random() * 1.5) + 's';
-      confetti.style.opacity = 0.6 + Math.random() * 0.4;
-      confetti.style.width = confetti.style.height = (8 + Math.random() * 10) + 'px';
-      confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '20%';
-      document.getElementById('confetti').appendChild(confetti);
-      setTimeout(() => confetti.remove(), 3500);
-    }
-    setInterval(createConfettiPiece, 120);
-  </script>
   <script src="script.js"></script>
 </body>
 </html>
