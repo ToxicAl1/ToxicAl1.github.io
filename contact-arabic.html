@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اتصل بنا | همسة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-hero {
+      padding: 140px 20px 80px;
+      text-align: center;
+      background: linear-gradient(135deg, #00a1e0 0%, #005b96 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-hero h1 {
+      font-size: 64px;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+      animation: bounceIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .contact-hero p {
+      font-size: 22px;
+      margin-bottom: 40px;
+      opacity: 0.92;
+      animation: fadeInUp 1.2s 0.2s both;
+    }
+    .contact-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin: 60px auto 0;
+      max-width: 900px;
+    }
+    .contact-card {
+      background: #fff;
+      color: #005b96;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,91,150,0.10), 0 2px 8px rgba(0,161,224,0.08);
+      padding: 50px 40px;
+      min-width: 280px;
+      flex: 1 1 260px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+      animation: popIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .contact-card:hover {
+      transform: scale(1.08) rotate(-2deg);
+      box-shadow: 0 20px 60px rgba(0,91,150,0.18), 0 4px 16px rgba(0,161,224,0.12);
+      background: linear-gradient(135deg, #e6f2ff 60%, #b3e0ff 100%);
+      color: #003366;
+    }
+    .contact-card .icon {
+      font-size: 56px;
+      margin-bottom: 20px;
+      color: #00a1e0;
+      animation: wiggle 2s infinite;
+      transition: color 0.3s;
+    }
+    .contact-card:hover .icon {
+      color: #005b96;
+      animation: shake 0.7s;
+    }
+    .contact-card h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    .contact-card p {
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: #005b96;
+      opacity: 0.85;
+    }
+    .contact-card a {
+      color: #fff;
+      background: #00a1e0;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s, color 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+      box-shadow: 0 2px 8px rgba(0,161,224,0.10);
+    }
+    .contact-card:hover a {
+      background: #005b96;
+      color: #fff;
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.7); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      80% { transform: scale(0.95); }
+      100% { transform: scale(1); }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.7) translateY(60px); opacity: 0; }
+      80% { transform: scale(1.05) translateY(-10px); opacity: 1; }
+      100% { transform: scale(1) translateY(0); }
+    }
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-8deg);}
+      20% { transform: rotate(8deg);}
+      40% { transform: rotate(-8deg);}
+      60% { transform: rotate(8deg);}
+      80% { transform: rotate(-8deg);}
+    }
+    @keyframes shake {
+      0% { transform: rotate(0deg);}
+      20% { transform: rotate(-10deg);}
+      40% { transform: rotate(10deg);}
+      60% { transform: rotate(-10deg);}
+      80% { transform: rotate(10deg);}
+      100% { transform: rotate(0deg);}
+    }
+    .confetti {
+      pointer-events: none;
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      z-index: 9999;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .confetti-piece {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: confetti-fall 3s linear infinite;
+    }
+    @keyframes confetti-fall {
+      0% { transform: translateY(-40px) rotate(0deg);}
+      100% { transform: translateY(110vh) rotate(360deg);}
+    }
+    @media (max-width: 900px) {
+      .contact-options { flex-direction: column; gap: 30px;}
+      .contact-card { min-width: 0; }
+      .contact-hero h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ...existing code for preloader and header if needed... -->
+
+  <section class="contact-hero">
+    <h1>تواصل مع همسة</h1>
+    <p>نحن هنا لمساعدتك! تواصل معنا عبر الهاتف أو البريد الإلكتروني أو الواتساب. فريقنا يحب التفاعل معك والإجابة على جميع استفساراتك.</p>
+    <div class="contact-options">
+      <div class="contact-card" onclick="window.open('tel:80055542672')">
+        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+        <h3>اتصل بنا</h3>
+        <p>تحدث مباشرة مع فريق الدعم.<br><strong>متواجدون 24/7!</strong></p>
+        <a href="tel:80055542672">+1 (800) 555-HAMSA</a>
+      </div>
+      <div class="contact-card" onclick="window.open('mailto:info@hamsasystem.com')">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <h3>راسلنا</h3>
+        <p>أرسل لنا استفساراتك أو ملاحظاتك أو حتى تحية.<br>نرد بسرعة!</p>
+        <a href="mailto:info@hamsasystem.com">info@hamsasystem.com</a>
+      </div>
+      <div class="contact-card" onclick="window.open('https://wa.me/180055542672')">
+        <div class="icon"><i class="fab fa-whatsapp"></i></div>
+        <h3>واتساب</h3>
+        <p>تواصل معنا فوراً عبر الواتساب.<br>دائماً متواجدون!</p>
+        <a href="https://wa.me/180055542672" target="_blank">ابدأ المحادثة</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="confetti" id="confetti"></div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>همسة</h4>
+        <p>النظام الأكثر شمولاً لإدارة المستشفيات، مصمم لتلبية احتياجات منشآت الرعاية الصحية الحديثة.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>الوحدات</h4>
+        <ul class="footer-links">
+          <li><a href="patient-management-arabic.html"><i class="fas fa-chevron-right"></i> إدارة المرضى</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> التوثيق السريري</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> الفوترة والإيرادات</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> نظام الصيدلية</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> المختبر</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>الموارد</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> التوثيق</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> بوابة المطورين API</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> أكاديمية التدريب</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> المدونة</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> دراسات الحالة</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>اتصل بنا</h4>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> 123 شارع الصحة، جناح 500، بوسطن، MA 02115</p>
+          <p><i class="fas fa-phone-alt"></i> (800) 555-HAMSA</p>
+          <p><i class="fas fa-envelope"></i> info@hamsasystem.com</p>
+          <p><i class="fas fa-clock"></i> الدعم: 24/7/365</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 نظام همسة لإدارة المستشفيات. جميع الحقوق محفوظة. | <a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a> | <a href="#">التوافق مع HIPAA</a></p>
+    </div>
+  </footer>
+  <script>
+    // Confetti fun!
+    function randomColor() {
+      const colors = ['#00a1e0', '#005b96', '#7dbcea', '#b3e0ff', '#ffb347', '#ff6961', '#77dd77', '#f49ac2'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+    function createConfettiPiece() {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti-piece';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.background = randomColor();
+      confetti.style.animationDuration = (2.5 + Math.random() * 1.5) + 's';
+      confetti.style.opacity = 0.6 + Math.random() * 0.4;
+      confetti.style.width = confetti.style.height = (8 + Math.random() * 10) + 'px';
+      confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '20%';
+      document.getElementById('confetti').appendChild(confetti);
+      setTimeout(() => confetti.remove(), 3500);
+    }
+    setInterval(createConfettiPiece, 120);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
