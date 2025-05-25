@@ -246,6 +246,9 @@ header.scrolled {
   animation: fadeInUp 1s ease both;
 }
 
+.hero h1 span {
+  white-space: nowrap;
+}
 .hero p {
   font-size: 22px;
   max-width: 700px;
