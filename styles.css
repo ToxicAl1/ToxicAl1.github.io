@@ -952,11 +952,9 @@ footer {
   .feature-detail {
     grid-template-columns: 1fr;
   }
-  
   .feature-image {
     order: -1;
   }
-  
   .hero h1 {
     font-size: 60px;
   }
@@ -964,44 +962,151 @@ footer {
 
 @media (max-width: 768px) {
   header {
-    padding: 15px 20px;
+    padding: 15px 10px;
     flex-direction: column;
+    align-items: flex-start;
   }
-  
+  .logo {
+    margin-bottom: 10px;
+  }
   .main-nav {
-    margin-top: 20px;
+    margin-top: 10px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 0;
+    width: 100%;
   }
-  
-  .hero h1 {
-    font-size: 48px;
+  .nav-link {
+    padding: 12px 10px;
+    font-size: 15px;
   }
-  
-  .hero p {
-    font-size: 18px;
-  }
-  
-  .section-title {
-    font-size: 32px;
-  }
-  
-  .feature-card {
-    padding: 30px 20px;
-  }
-  
   .mega-menu {
     position: static;
-    width: auto;
+    width: 100%;
     display: none;
     opacity: 1;
     visibility: visible;
     transform: none;
     box-shadow: none;
-    padding: 20px;
+    padding: 10px 0;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border-radius: 0 0 10px 10px;
   }
-  
-  .nav-item:hover .mega-menu {
+  .nav-item:hover .mega-menu,
+  .nav-item:focus-within .mega-menu {
     display: block;
   }
+  .nav-item {
+    width: 100%;
+  }
+  .nav-link {
+    width: 100%;
+    border-radius: 0;
+  }
+  .language-switcher {
+    margin: 10px 0 0 0 !important;
+    flex-wrap: wrap;
+  }
+  .hero h1 {
+    font-size: 36px;
+    word-break: break-word;
+  }
+  .hero {
+    padding: 100px 10px 60px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+  }
+  .feature-highlights,
+  .detailed-features,
+  .cta-section,
+  .stats-section,
+  .testimonials {
+    padding: 40px 8px !important;
+  }
+  .features-grid,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .feature-card,
+  .stat-item {
+    padding: 20px 10px !important;
+  }
+  .feature-detail {
+    gap: 20px;
+  }
+  .feature-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .section-title,
+  .cta-content h2 {
+    font-size: 22px !important;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 5px;
+  }
+  .footer-column {
+    margin-bottom: 20px;
+  }
+  .footer-bottom {
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .cta-button {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px 0;
+  }
+  .feature-tabs {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .tab-button {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .feature-list li {
+    padding-left: 22px;
+    font-size: 15px;
+  }
+  .stat-number {
+    font-size: 36px;
+  }
+  .stat-label {
+    font-size: 14px;
+  }
+  .testimonial-slide {
+    padding: 20px;
+    margin: 10px 0;
+  }
+  .testimonial-content {
+    font-size: 15px;
+  }
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .author-info h4 {
+    font-size: 15px;
+  }
+  .author-info p {
+    font-size: 12px;
+  }
+}
+
+/* Extra: fix for RTL mega menu on mobile */
+html[dir="rtl"] .mega-menu {
+  left: auto;
+  right: 0;
 }
