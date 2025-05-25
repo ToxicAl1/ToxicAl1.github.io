@@ -135,27 +135,69 @@
   </style>
 </head>
 <body>
-  <!-- ...existing code for preloader and header if needed... -->
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
 
-  <section class="contact-hero">
-    <h1>تواصل مع همسة</h1>
-    <p>نحن هنا لمساعدتك! تواصل معنا عبر الهاتف أو البريد الإلكتروني. فريقنا يحب التفاعل معك والإجابة على جميع استفساراتك.</p>
-    <div class="contact-options">
-      <div class="contact-card" onclick="window.open('tel:80055542672')">
-        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="image.png" alt="شعار همسة" class="floating">
+      <span class="logo-text">همسة</span>
+    </div>
+    <div class="nav-container">
+      <div class="language-switcher" style="display:flex;align-items:center;gap:8px;margin-left:20px;">
+        <span class="lang-btn active" style="padding:6px 16px;border-radius:20px;border:1px solid #bbb;background:#eee;color:#888;font-weight:600;cursor:default;">العربية</span>
+        <a href="contact.html" class="lang-btn" style="padding:6px 16px;border-radius:20px;border:1px solid #005b96;background:#fff;color:#005b96;text-decoration:none;font-weight:600;">English</a>
+      </div>
+      <nav class="main-nav">
+        <div class="nav-item">
+          <a href="main-arabic.html#features" class="nav-link">الميزات <i class="fas fa-chevron-down"></i></a>
+          <!-- ...existing code... -->
+        </div>
+        <!-- ...existing code... -->
+        <div class="nav-item">
+          <a href="contact-arabic.html" class="nav-link">اتصل بنا</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding: 120px 20px 60px;">
+    <h1>
+      <span>اتصل</span>
+      <span>بنا</span>
+    </h1>
+    <p>
+      نحن هنا لمساعدتك! تواصل معنا عبر الهاتف أو البريد الإلكتروني لأي استفسار أو دعم.
+    </p>
+    <div class="hero-buttons">
+      <a href="main-arabic.html#features" class="cta-button secondary"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a>
+    </div>
+  </section>
+
+  <!-- Contact Options Section -->
+  <section class="feature-highlights">
+    <h2 class="section-title">تواصل معنا</h2>
+    <div class="features-grid" style="max-width:700px;">
+      <div class="feature-card" onclick="window.open('tel:80055542672')">
+        <div class="feature-icon"><i class="fas fa-phone-alt"></i></div>
         <h3>اتصل بنا</h3>
         <p>تحدث مباشرة مع فريق الدعم.<br><strong>متواجدون 24/7!</strong></p>
-        <a href="tel:80055542672">+1 (800) 555-HAMSA</a>
+        <a href="tel:80055542672" class="cta-button" style="margin-top:16px;">+1 (800) 555-HAMSA</a>
       </div>
-      <div class="contact-card" onclick="window.open('mailto:info@hamsasystem.com')">
-        <div class="icon"><i class="fas fa-envelope"></i></div>
+      <div class="feature-card" onclick="window.open('mailto:info@hamsasystem.com')">
+        <div class="feature-icon"><i class="fas fa-envelope"></i></div>
         <h3>راسلنا</h3>
-        <p>أرسل لنا استفساراتك أو ملاحظاتك أو حتى تحية.<br>نرد بسرعة!</p>
-        <a href="mailto:info@hamsasystem.com">info@hamsasystem.com</a>
+        <p>أرسل لنا استفساراتك أو ملاحظاتك وسنرد عليك في أقرب وقت ممكن.</p>
+        <a href="mailto:info@hamsasystem.com" class="cta-button" style="margin-top:16px;">info@hamsasystem.com</a>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-column">
@@ -199,7 +241,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 نظام همسة لإدارة المستشفيات. جميع الحقوق محفوظة. | <a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a> | <a href="#">التوافق مع HIPAA</a></p>
+      <p>© 2025 نظام همسة لإدارة المستشفيات. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
   <script src="script.js"></script>
