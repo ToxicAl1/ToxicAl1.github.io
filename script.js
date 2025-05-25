@@ -73,15 +73,18 @@ function initAnimations() {
   
   statNumbers.forEach(stat => {
     const target = +stat.getAttribute('data-count');
-    const count = +stat.innerText;
-    const increment = target / speed;
-    
-    if (count < target) {
-      stat.innerText = Math.ceil(count + increment);
-      setTimeout(initAnimations, 1);
-    } else {
-      stat.innerText = target;
+    // Only animate if data-count is a valid number
+    if (!isNaN(target) && stat.hasAttribute('data-count')) {
+      const count = +stat.innerText;
+      const increment = target / speed;
+      if (count < target) {
+        stat.innerText = Math.ceil(count + increment);
+        setTimeout(initAnimations, 1);
+      } else {
+        stat.innerText = target;
+      }
     }
+    // If no data-count, leave as is (for "24/7" etc)
   });
 }
 
