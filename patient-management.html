@@ -1,84 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Outpatient Management</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Example main page style, adjust as needed -->
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f7f9fb;
-            margin: 0;
-            padding: 0;
-            color: #222;
-        }
-        header {
-            background: #1976d2;
-            color: #fff;
-            padding: 24px 32px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            padding: 32px 40px;
-        }
-        h2 {
-            color: #1976d2;
-            margin-top: 0;
-        }
-        ul {
-            margin-top: 16px;
-            margin-bottom: 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 24px;
-            color: #1976d2;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .back-link:hover {
-            color: #0d47a1;
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Patient Management | HAMSA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts and Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Outpatient Management</h1>
-    </header>
-    <div class="container">
-        <a href="main-page.html" class="back-link">&larr; Back to Patient Module</a>
-        <h2>Outpatient Manager</h2>
-        <p>
-            The Outpatient Management module (for non-admitted patients) is an innovative system designed to streamline the monitoring of a patient’s condition during visits to outpatient or specialist clinics within hospitals and health centers. It documents the patient's condition and treatment at each visit and integrates seamlessly with other subsystems such as pharmacy, laboratory, radiology, administration, and billing for medical services.
-        </p>
-        <p>
-            This module helps organize outpatient clinic visits, reducing the burden of unscheduled patient reviews. The system offers the following key functionalities:
-        </p>
-        <ul>
-            <li>Appointment scheduling and management</li>
-            <li>Management of specialist outpatient clinics</li>
-            <li>Direct access to the Patient Information Center for monitoring and reviewing patient status</li>
-            <li>Organizing the required procedures for each patient</li>
-            <li>Sending requests such as: referrals, re-visits, radiology exams, summary reports, and more</li>
-            <li>Access to historical patient data through recorded medical consultations</li>
-        </ul>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="image.png" alt="HAMSA Logo" class="floating">
+      <span class="logo-text">HAMSA</span>
     </div>
+    <div class="nav-container">
+      <nav class="main-nav">
+        <div class="nav-item">
+          <a href="main-page.html#features" class="nav-link">Features <i class="fas fa-chevron-down"></i></a>
+        </div>
+        <div class="nav-item">
+          <a href="main-page.html#solutions" class="nav-link">Solutions <i class="fas fa-chevron-down"></i></a>
+        </div>
+        <div class="nav-item">
+          <a href="main-page.html#resources" class="nav-link">Resources <i class="fas fa-chevron-down"></i></a>
+        </div>
+        <div class="nav-item">
+          <a href="main-page.html#pricing" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="main-page.html#contact" class="nav-link">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding: 120px 20px 60px;">
+    <h1>
+      <span><span class="acronym-letter">P</span>atient</span>
+      <span><span class="acronym-letter">M</span>anagement</span>
+    </h1>
+    <p>
+      The Patient Management module streamlines patient registration, appointment scheduling, and health record management, ensuring seamless care from admission to discharge.
+    </p>
+    <div class="hero-buttons">
+      <a href="main-page.html#features" class="cta-button secondary"><i class="fas fa-arrow-left"></i> Back to Main Page</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="feature-highlights">
+    <h2 class="section-title">Outpatient Manager</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+        <h3>Appointment Scheduling</h3>
+        <p>
+          Efficiently manage patient appointments, reduce wait times, and send automated reminders for upcoming visits.
+        </p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-file-medical"></i></div>
+        <h3>Health Records</h3>
+        <p>
+          Access and update comprehensive electronic health records for every patient, including visit history and treatment plans.
+        </p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-user-injured"></i></div>
+        <h3>Specialist Clinics</h3>
+        <p>
+          Manage specialist outpatient clinics and organize required procedures and referrals for each patient.
+        </p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-history"></i></div>
+        <h3>Historical Data</h3>
+        <p>
+          Instantly access historical patient data and previous consultations for better clinical decisions.
+        </p>
+      </div>
+    </div>
+    <div style="max-width:900px;margin:40px auto 0;">
+      <ul class="feature-list">
+        <li>Appointment scheduling and management</li>
+        <li>Management of specialist outpatient clinics</li>
+        <li>Direct access to the Patient Information Center</li>
+        <li>Organizing required procedures for each patient</li>
+        <li>Sending requests: referrals, re-visits, radiology exams, summary reports, and more</li>
+        <li>Access to historical patient data through recorded consultations</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Discover More Features</h2>
+      <p>Contact us to learn how HAMSA can transform your patient management workflow.</p>
+      <div class="hero-buttons">
+        <a href="main-page.html#contact" class="cta-button">Contact Sales</a>
+        <a href="main-page.html#features" class="cta-button secondary">All Features</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>HAMSA</h4>
+        <p>The most comprehensive hospital management system, designed to meet the evolving needs of modern healthcare facilities.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Modules</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Patient Management</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Clinical Documentation</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Billing & Revenue</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Pharmacy System</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Laboratory</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Documentation</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> API Developer Portal</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Training Academy</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Case Studies</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Blvd, Suite 500, Boston, MA 02115</p>
+          <p><i class="fas fa-phone-alt"></i> (800) 555-HAMSA</p>
+          <p><i class="fas fa-envelope"></i> info@hamsasystem.com</p>
+          <p><i class="fas fa-clock"></i> Support: 24/7/365</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HAMSA Hospital Management System. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">HIPAA Compliance</a></p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
