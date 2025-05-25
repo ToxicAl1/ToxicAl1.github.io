@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>همسة - نظام إدارة المستشفيات المتقدم</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="image.png" alt="شعار همسة" class="floating">
+      <span class="logo-text">همسة</span>
+    </div>
+    <div class="nav-container">
+      <div class="language-switcher" style="display:flex;align-items:center;gap:8px;margin-left:20px;">
+        <span class="lang-btn active" style="padding:6px 16px;border-radius:20px;border:1px solid #bbb;background:#eee;color:#888;font-weight:600;cursor:default;">العربية</span>
+        <a href="main-page.html" class="lang-btn" style="padding:6px 16px;border-radius:20px;border:1px solid #005b96;background:#fff;color:#005b96;text-decoration:none;font-weight:600;">English</a>
+      </div>
+      <nav class="main-nav">
+        <div class="nav-item">
+          <a href="#features" class="nav-link">الميزات <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-menu">
+            <div class="mega-menu-column">
+              <h4>إدارة المرضى</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-user-injured"></i> تسجيل المرضى</a></li>
+                <li><a href="#"><i class="fas fa-calendar-check"></i> جدولة المواعيد</a></li>
+                <li><a href="#"><i class="fas fa-file-medical"></i> السجلات الطبية الإلكترونية</a></li>
+                <li><a href="#"><i class="fas fa-prescription-bottle-alt"></i> إدارة الوصفات الطبية</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h4>الوحدات السريرية</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-procedures"></i> إدارة المرضى الداخليين</a></li>
+                <li><a href="#"><i class="fas fa-ambulance"></i> قسم الطوارئ</a></li>
+                <li><a href="#"><i class="fas fa-x-ray"></i> وحدة الأشعة</a></li>
+                <li><a href="#"><i class="fas fa-flask"></i> وحدة المختبر</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h4>الإدارة</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-cash-register"></i> الفوترة والتأمين</a></li>
+                <li><a href="#"><i class="fas fa-warehouse"></i> إدارة المخزون</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> التحليلات والتقارير</a></li>
+                <li><a href="#"><i class="fas fa-user-md"></i> إدارة الموظفين</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#solutions" class="nav-link">الحلول <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-menu">
+            <div class="mega-menu-column">
+              <h4>حسب نوع المنشأة</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-hospital"></i> المستشفيات الكبيرة</a></li>
+                <li><a href="#"><i class="fas fa-clinic-medical"></i> العيادات</a></li>
+                <li><a href="#"><i class="fas fa-teeth"></i> عيادات الأسنان</a></li>
+                <li><a href="#"><i class="fas fa-eye"></i> مراكز العيون</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h4>حسب القسم</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-heartbeat"></i> أمراض القلب</a></li>
+                <li><a href="#"><i class="fas fa-baby"></i> طب الأطفال</a></li>
+                <li><a href="#"><i class="fas fa-brain"></i> الأعصاب</a></li>
+                <li><a href="#"><i class="fas fa-bone"></i> العظام</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h4>حلول متخصصة</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-mobile-alt"></i> تكامل الجوال</a></li>
+                <li><a href="#"><i class="fas fa-robot"></i> التشخيص بالذكاء الاصطناعي</a></li>
+                <li><a href="#"><i class="fas fa-cloud"></i> استضافة سحابية</a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i> التوافق مع HIPAA</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#resources" class="nav-link">الموارد <i class="fas fa-chevron-down"></i></a>
+          <div class="mega-menu">
+            <div class="mega-menu-column">
+              <h4>التعلم</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-book"></i> التوثيق</a></li>
+                <li><a href="#"><i class="fas fa-video"></i> فيديوهات تعليمية</a></li>
+                <li><a href="#"><i class="fas fa-graduation-cap"></i> الدورات التدريبية</a></li>
+                <li><a href="#"><i class="fas fa-certificate"></i> الشهادات</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h4>الدعم</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-question-circle"></i> مركز المساعدة</a></li>
+                <li><a href="#"><i class="fas fa-headset"></i> دعم 24/7</a></li>
+                <li><a href="#"><i class="fas fa-tools"></i> الصيانة</a></li>
+                <li><a href="#"><i class="fas fa-sync-alt"></i> تحديثات النظام</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column">
+              <h4>المجتمع</h4>
+              <ul class="mega-menu-links">
+                <li><a href="#"><i class="fas fa-comments"></i> منتدى المستخدمين</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> الفعاليات</a></li>
+                <li><a href="#"><i class="fas fa-blog"></i> المدونة</a></li>
+                <li><a href="#"><i class="fas fa-newspaper"></i> النشرة الإخبارية</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#pricing" class="nav-link">الأسعار</a>
+        </div>
+        <div class="nav-item">
+          <a href="#contact" class="nav-link">اتصل بنا</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>
+      <span><span class="acronym-letter">ه</span>يكل</span>
+      <span><span class="acronym-letter">ا</span>تمتة</span>
+      <span><span class="acronym-letter">م</span>ستشفى</span>
+      <span><span class="acronym-letter">س</span>تخدم</span>
+      <span>و</span>
+      <span><span class="acronym-letter">أ</span>رشفة</span>
+    </h1>
+    <p>همسة هو النظام الأكثر شمولاً لإدارة المستشفيات، حيث يدمج جميع جوانب الإدارة الصحية في منصة ذكية واحدة.</p>
+    <div class="hero-buttons">
+      <button class="cta-button">اطلب تجربة</button>
+      <button class="cta-button secondary">اعرف المزيد</button>
+    </div>
+  </section>
+
+  <!-- Feature Highlights -->
+  <section class="feature-highlights">
+    <h2 class="section-title">الميزات الرئيسية</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-user-injured"></i></div>
+        <h3>إدارة المرضى</h3>
+        <p>تسجيل المرضى، تتبع التاريخ الطبي، وإدارة الملفات الشخصية مع إمكانيات بحث متقدمة ومسارات عمل قابلة للتخصيص.</p>
+        <a href="patient-management.html" class="feature-link">استكشف الوحدة <i class="fas fa-arrow-left"></i></a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+        <h3>جدولة المواعيد</h3>
+        <p>نظام جدولة ذكي مع تذكيرات تلقائية، إدارة قوائم الانتظار، وتكامل مع جداول الأطباء والأجهزة المحمولة.</p>
+        <a href="#" class="feature-link">استكشف الوحدة <i class="fas fa-arrow-left"></i></a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-file-medical"></i></div>
+        <h3>السجلات الطبية الإلكترونية</h3>
+        <p>سجلات طبية إلكترونية قابلة للتخصيص بالكامل مع قوالب ودعم اتخاذ القرار السريري وتكامل مع أنظمة أخرى.</p>
+        <a href="#" class="feature-link">استكشف الوحدة <i class="fas fa-arrow-left"></i></a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-cash-register"></i></div>
+        <h3>الفوترة والتأمين</h3>
+        <p>معالجة المطالبات تلقائياً مع التحقق الفوري من الأهلية، إدارة الرفض، وأدوات تقارير مالية شاملة.</p>
+        <a href="#" class="feature-link">استكشف الوحدة <i class="fas fa-arrow-left"></i></a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-pills"></i></div>
+        <h3>إدارة الصيدلية</h3>
+        <p>حل متكامل للصيدلية مع التحكم في المخزون، إعادة التعبئة التلقائية، فحص التداخلات الدوائية، وتتبع الوصفات.</p>
+        <a href="#" class="feature-link">استكشف الوحدة <i class="fas fa-arrow-left"></i></a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-flask"></i></div>
+        <h3>تكامل المختبر</h3>
+        <p>إدارة أوامر المختبر بسلاسة مع ربط الأجهزة، التحقق من النتائج، ونظام إشعارات للأطباء.</p>
+        <a href="#" class="feature-link">استكشف الوحدة <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-count="36">0</div>
+        <div class="stat-label">منشآت صحية</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="98">0</div>
+        <div class="stat-label">معدل الرضا</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">الدعم</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="150">0</div>
+        <div class="stat-label">وحدات متكاملة</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Features -->
+  <section class="detailed-features">
+    <h2 class="section-title">حلول شاملة</h2>
+    <div class="feature-tabs">
+      <button class="tab-button active" data-tab="clinical">الوحدات السريرية</button>
+      <button class="tab-button" data-tab="administrative">الإدارية</button>
+      <button class="tab-button" data-tab="financial">المالية</button>
+      <button class="tab-button" data-tab="integration">التكامل</button>
+    </div>
+    <div class="tab-content active" id="clinical">
+      <div class="feature-detail">
+        <div class="feature-image">
+          <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="الوحدات السريرية">
+        </div>
+        <div class="feature-description">
+          <h3>إدارة سريرية متقدمة</h3>
+          <p>تم تصميم وحداتنا السريرية بواسطة متخصصين في الرعاية الصحية لتبسيط رعاية المرضى مع الحفاظ على أعلى معايير الممارسة الطبية.</p>
+          <ul class="feature-list">
+            <li>قوالب سجلات طبية متخصصة</li>
+            <li>دعم اتخاذ القرار السريري بالذكاء الاصطناعي</li>
+            <li>إدارة الأدوية والوصفات الإلكترونية</li>
+            <li>تحسين سير عمل التمريض</li>
+            <li>توثيق الإجراءات والترميز</li>
+          </ul>
+          <button class="cta-button">عرض جميع الميزات السريرية</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content" id="administrative">
+      <div class="feature-detail">
+        <div class="feature-image">
+          <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="الوحدات الإدارية">
+        </div>
+        <div class="feature-description">
+          <h3>أدوات إدارية فعالة</h3>
+          <p>قلل العبء الإداري باستخدام أدواتنا الشاملة المصممة خصيصاً لإدارة الرعاية الصحية.</p>
+          <ul class="feature-list">
+            <li>جدولة الموظفين والتحقق من الاعتماد</li>
+            <li>إدارة المرافق والغرف</li>
+            <li>نظام إدارة الوثائق</li>
+            <li>تتبع الامتثال والتقارير</li>
+            <li>بوابة تواصل المرضى</li>
+          </ul>
+          <button class="cta-button">عرض جميع الميزات الإدارية</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content" id="financial">
+      <div class="feature-detail">
+        <div class="feature-image">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80" alt="الوحدات المالية">
+        </div>
+        <div class="feature-description">
+          <h3>حلول مالية متكاملة</h3>
+          <p>حقق أقصى كفاءة في دورة الإيرادات مع نظام الإدارة المالية المتكامل لدينا.</p>
+          <ul class="feature-list">
+            <li>معالجة المطالبات تلقائياً</li>
+            <li>التحقق الفوري من الأهلية</li>
+            <li>إدارة الرفض والاستئناف</li>
+            <li>فواتير المرضى وخطط الدفع</li>
+            <li>تحليلات مالية وتوقعات</li>
+          </ul>
+          <button class="cta-button">عرض جميع الميزات المالية</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content" id="integration">
+      <div class="feature-detail">
+        <div class="feature-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="وحدات التكامل">
+        </div>
+        <div class="feature-description">
+          <h3>تكامل الأنظمة بسلاسة</h3>
+          <p>قم بربط همسة مع أنظمتك الحالية وتطبيقات الطرف الثالث للحصول على منظومة رعاية صحية موحدة.</p>
+          <ul class="feature-list">
+            <li>تكامل HL7/FHIR</li>
+            <li>ربط الأجهزة الطبية</li>
+            <li>واجهات أنظمة المختبرات والأشعة</li>
+            <li>اتصال مع شبكات الصيدليات</li>
+            <li>واجهة برمجة تطبيقات للتطوير المخصص</li>
+          </ul>
+          <button class="cta-button">عرض جميع ميزات التكامل</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2 class="section-title">موثوق من قبل المتخصصين في الرعاية الصحية</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial-slide active">
+        <div class="testimonial-content">
+          تطبيق همسة غيّر عمليات المستشفى لدينا. انخفضت أوقات الانتظار بنسبة 40%، ودقة الفوترة تحسنت إلى 99.8%. دعم اتخاذ القرار السريري كان لا يقدر بثمن لأطبائنا.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="د. جيمس ويلسون">
+          </div>
+          <div class="author-info">
+            <h4>د. جيمس ويلسون</h4>
+            <p>المدير الطبي، مستشفى سيتي جنرال</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide">
+        <div class="testimonial-content">
+          كمدير عيادة، أقدر كيف سهّل همسة سير العمل لدينا. وحدة جدولة المواعيد خفضت حالات عدم الحضور بنسبة 35%، وأدوات التقارير تعطيني رؤى فورية عن أداء العيادة.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="سارة جونسون">
+          </div>
+          <div class="author-info">
+            <h4>سارة جونسون</h4>
+            <p>مديرة العيادة، عيادة ليكسايد الطبية</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-slide">
+        <div class="testimonial-content">
+          ساعدتنا الوحدات المالية في همسة على تقليل رفض المطالبات بنسبة 60% وتحسين أيام التحصيل من 45 إلى 28. النظام يدفع لنفسه من خلال زيادة الإيرادات وتقليل التكاليف الإدارية.
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="مايكل تشين">
+          </div>
+          <div class="author-info">
+            <h4>مايكل تشين</h4>
+            <p>المدير المالي، نظام الرعاية الصحية الإقليمي</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-nav">
+      <div class="testimonial-dot active" data-slide="0"></div>
+      <div class="testimonial-dot" data-slide="1"></div>
+      <div class="testimonial-dot" data-slide="2"></div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>جاهز لتحويل منشأتك الصحية؟</h2>
+      <p>انضم إلى آلاف مقدمي الرعاية الصحية الذين يثقون بهمسة لتحسين عملياتهم وتعزيز رعاية المرضى.</p>
+      <div class="hero-buttons">
+        <button class="cta-button">اطلب تجربة مخصصة</button>
+        <button class="cta-button secondary">تواصل مع المبيعات</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>همسة</h4>
+        <p>النظام الأكثر شمولاً لإدارة المستشفيات، مصمم لتلبية احتياجات منشآت الرعاية الصحية الحديثة.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>الوحدات</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> إدارة المرضى</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> التوثيق السريري</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> الفوترة والإيرادات</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> نظام الصيدلية</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> المختبر</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>الموارد</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> التوثيق</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> بوابة المطورين API</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> أكاديمية التدريب</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> المدونة</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> دراسات الحالة</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>اتصل بنا</h4>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> 123 شارع الصحة، جناح 500، بوسطن، MA 02115</p>
+          <p><i class="fas fa-phone-alt"></i> (800) 555-HAMSA</p>
+          <p><i class="fas fa-envelope"></i> info@hamsasystem.com</p>
+          <p><i class="fas fa-clock"></i> الدعم: 24/7/365</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 نظام همسة لإدارة المستشفيات. جميع الحقوق محفوظة. | <a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a> | <a href="#">التوافق مع HIPAA</a></p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
