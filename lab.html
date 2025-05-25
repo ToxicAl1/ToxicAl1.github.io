@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Laboratory Information System | HAMSA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts and Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="image.png" alt="HAMSA Logo" class="floating">
+      <span class="logo-text">HAMSA</span>
+    </div>
+    <div class="nav-container">
+      <!-- Language Switcher -->
+      <div class="language-switcher" style="display:flex;align-items:center;gap:8px;margin-right:20px;">
+        <span class="lang-btn active" style="padding:6px 16px;border-radius:20px;border:1px solid #bbb;background:#eee;color:#888;font-weight:600;cursor:default;">English</span>
+        <a href="lab-arabic.html" class="lang-btn" style="padding:6px 16px;border-radius:20px;border:1px solid #005b96;background:#fff;color:#005b96;text-decoration:none;font-weight:600;">العربية</a>
+      </div>
+      <nav class="main-nav">
+        <!-- ...existing code for nav and mega menu... -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding: 120px 20px 60px;">
+    <h1>
+      <span>Laboratory Information System</span>
+    </h1>
+    <p>
+      The Laboratory Information System manages laboratory operations, incoming requests from departments, data collection, and validation by the supervising physician. It sends laboratory test results via HAMSA to requesting departments or doctors. The system streamlines workflow, reporting, and ensures professional lab management for:
+    </p>
+    <ul class="feature-list" style="text-align:right;max-width:700px;margin:0 auto;">
+      <li>Efficient management of patient samples.</li>
+      <li>Alerts for abnormal laboratory results.</li>
+      <li>Display of current and previous results for each patient.</li>
+      <li>Quality control.</li>
+      <li>Automatic archiving of lab reports in the electronic patient record.</li>
+      <li>Integration with the queue management system for fast patient tracking.</li>
+      <li>Notification to staff via "music tone" for new tests—important for busy lab staff.</li>
+      <li>Display of room number in test requests for easy access to inpatient rooms for sample collection.</li>
+    </ul>
+    <p>
+      The system provides doctors with secure, easy access to results, reducing patient wait times. It supports a wide range of predefined laboratory tests (biochemistry, cytology, hematology, microbiology, serology, etc.).
+    </p>
+  </section>
+
+  <!-- Main Content -->
+  <section class="feature-highlights">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>Workflow Management</h3>
+        <ul class="feature-list">
+          <li>Dedicated modules for daily lab operations and multiple sample types.</li>
+          <li>Integration with other systems for infection control, patient reports, and sample management.</li>
+          <li>Allow lab staff to enter results, query, prepare labels, and track sample storage.</li>
+          <li>Quality monitoring for all lab processes and results.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-vials"></i></div>
+        <h3>Sample Collection & Verification</h3>
+        <ul class="feature-list">
+          <li>Easy sample collection and tracking across labs.</li>
+          <li>Barcode label generation for samples.</li>
+          <li>System alerts for non-standard results.</li>
+          <li>Unlimited users and efficient sample processing (batch or individual).</li>
+          <li>Ability to regroup samples and reprint labels.</li>
+          <li>Direct tracking of delayed or pending samples.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-notes-medical"></i></div>
+        <h3>Results Management</h3>
+        <ul class="feature-list">
+          <li>Enter results via system terminals.</li>
+          <li>Automated verification to speed up workflow.</li>
+          <li>Easy access to previous results for each patient.</li>
+          <li>Quick review and annotation of results by doctors.</li>
+          <li>Report writing, corrections, and integration with the advisory center for visual alerts.</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-file-medical-alt"></i></div>
+        <h3>Advanced Reporting & Quality Control</h3>
+        <ul class="feature-list">
+          <li>Results delivery based on user-defined criteria.</li>
+          <li>Access results via the Patient Data Center.</li>
+          <li>Easy printing and emailing of lab reports.</li>
+          <li>Define new quality control standards and results.</li>
+          <li>Quality control for samples and compliance with global standards.</li>
+        </ul>
+      </div>
+    </div>
+    <div style="max-width:900px;margin:40px auto 0;">
+      <h3>Global Laboratory Test Library</h3>
+      <p>
+        The system is equipped with a global library of common laboratory tests, categorized by standard international nomenclature. You can add new groups and tests easily.
+      </p>
+      <p>
+        After defining and categorizing tests, they are moved to the available tests list for the lab. Tools allow adding or removing tests as needed.
+      </p>
+      <h3>Managing Available Lab Tests</h3>
+      <ul class="feature-list">
+        <li>Easy search for any test by entering part of its name.</li>
+        <li>Includes a global library of over 100 measurement units.</li>
+        <li>Mark tests as "Not Available" if equipment is down or supplies are out, hiding them from doctors and requesters.</li>
+        <li>Test pricing and grouping into packages for quick selection.</li>
+        <li>Create unlimited packages and add/remove tests as needed.</li>
+        <li>Enter standard criteria for each test (gender, age, range, abnormal low/high, etc.).</li>
+      </ul>
+      <h3>Sample Collection</h3>
+      <p>
+        Samples are collected by lab assistants (blood, urine, saliva, stool, etc.) and labeled with barcodes. The system tracks payment status and can accept or reject unpaid samples based on policy.
+      </p>
+      <h3>Lab Test Processing</h3>
+      <p>
+        Lab services match samples with system orders using barcodes, sorting samples for each patient for testing.
+      </p>
+      <h3>Entering Test Results</h3>
+      <ul class="feature-list">
+        <li>Manual entry: Lab staff enter results from device screens or visual readings, which are then evaluated and archived with the doctor's e-signature.</li>
+        <li>Archived results: When repeating tests, previous values are shown for comparison.</li>
+        <li>Device output archiving: The system archives printed device outputs in the patient record, even if the device can't export data directly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>HAMSA</h4>
+        <p>The most comprehensive hospital management system, designed to meet the evolving needs of modern healthcare facilities.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/hamsa.lagash" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Modules</h4>
+        <ul class="footer-links">
+          <li><a href="patient-management.html"><i class="fas fa-chevron-right"></i> Patient Management</a></li>
+          <li><a href="appointment.html"><i class="fas fa-chevron-right"></i> Appointment Scheduling</a></li>
+          <li><a href="electronic-report.html"><i class="fas fa-chevron-right"></i> Electronic Health Records</a></li>
+          <li><a href="billing.html"><i class="fas fa-chevron-right"></i> Billing & Insurance</a></li>
+          <li><a href="pharmacy.html"><i class="fas fa-chevron-right"></i> Pharmacy</a></li>
+          <li><a href="lab.html"><i class="fas fa-chevron-right"></i> Laboratory</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Documentation</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> API Developer Portal</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Training Academy</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i> Case Studies</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Blvd, Suite 500, Boston, MA 02115</p>
+          <p><i class="fas fa-phone-alt"></i> (800) 555-HAMSA</p>
+          <p><i class="fas fa-envelope"></i> info@hamsasystem.com</p>
+          <p><i class="fas fa-clock"></i> Support: 24/7/365</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HAMSA Hospital Management System. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
