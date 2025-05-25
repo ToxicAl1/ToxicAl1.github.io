@@ -101,3 +101,35 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.feature-card, .stat-item').forEach(element => {
   observer.observe(element);
 });
+
+// Collapse mega menu on scroll for mobile
+(function() {
+  let lastScrollY = window.scrollY;
+  let isMobile = () => window.innerWidth <= 900;
+  let closeMegaMenus = () => {
+    document.querySelectorAll('.main-nav .mega-menu').forEach(menu => {
+      menu.style.display = '';
+    });
+  };
+
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    if (isMobile()) {
+      closeMegaMenus();
+    }
+  });
+
+  window.addEventListener('resize', function() {
+    if (!isMobile()) {
+      // Reset display property for desktop
+      document.querySelectorAll('.main-nav .mega-menu').forEach(menu => {
+        menu.style.display = '';
+      });
+    }
+  });
+})();
